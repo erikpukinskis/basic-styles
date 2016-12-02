@@ -4,6 +4,15 @@ module.exports = library.export(
   "basic-styles",
   ["web-element"],
   function(element) {
+
+    // # Component Styles
+
+    // This a minimal set of UI (user interface) controls for typing and pushing buttons and stuff.
+
+    // ## Type
+
+    // We start with the typeface. Helvetica with slightly darkened headings.
+
     var p = element.style(
       "body, input, button, p", {
         "font-family": "Helvetica",
@@ -22,6 +31,9 @@ module.exports = library.export(
       }
     )
 
+    // ## Buttons
+
+    // A button is just a rectangle with a background color.
 
     var button = element.style(
       "button, .multiple-choice, input[type=submit]", 
@@ -34,6 +46,10 @@ module.exports = library.export(
       }
     )
 
+    // ## Entering text
+
+    // Text inputs have a gray label
+
     var input = element.style(
       "input, input[type=text], button, .container, li, .multiple-choice, .row", {
         "border": "0px",
@@ -41,8 +57,7 @@ module.exports = library.export(
         "display": "block",
         "margin-bottom": "15px",
       }
-    )
-
+ 
     var buttonHover = element.style(
       "button:hover, .multiple-choice:hover, input[type=submit]:hover", {
         "background-color": "rgb(0, 226, 143)",
@@ -56,6 +71,8 @@ module.exports = library.export(
       }
     )
 
+    // and an underline.
+
     var textInput = element.style(
       "input[type=text]",
       {
@@ -63,6 +80,10 @@ module.exports = library.export(
         "width": "20em",
       }
     )
+
+    // ## Separation
+
+    // In order to separate content out we have a .container class.
 
     var container = element.style(".container",
       {
