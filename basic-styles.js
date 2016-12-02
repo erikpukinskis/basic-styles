@@ -57,6 +57,7 @@ module.exports = library.export(
         "display": "block",
         "margin-bottom": "15px",
       }
+    )
  
     var buttonHover = element.style(
       "button:hover, .multiple-choice:hover, input[type=submit]:hover", {
