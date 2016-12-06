@@ -53,7 +53,7 @@ module.exports = library.export(
     var input = element.style(
       "input, input[type=text], button, .container, li, .multiple-choice, .row", {
         "border": "0px",
-        "padding": "9px 15px",
+        "padding": "11px 15px 7px 15px",
         "display": "block",
         "margin-bottom": "15px",
       }
@@ -79,6 +79,7 @@ module.exports = library.export(
       {
         "border-bottom": "2px solid #bbb",
         "width": "20em",
+        "color": "#085",
       }
     )
 

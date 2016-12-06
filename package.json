@@ -7,7 +7,8 @@
     "module-library": "*",
     "web-element": "*",
     "web-site": "*",
-    "browser-bridge": "*"
+    "browser-bridge": "*",
+    "add-html": "*"
   },
   "devDependencies": {
     "run-test": "*"
