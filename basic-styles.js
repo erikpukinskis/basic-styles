@@ -79,7 +79,7 @@ module.exports = library.export(
       {
         "border-bottom": "2px solid #bbb",
         "width": "20em",
-        "color": "#085",
+        "color": "#3b8",
       }
     )
 
