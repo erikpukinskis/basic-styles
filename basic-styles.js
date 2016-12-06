@@ -14,11 +14,12 @@ module.exports = library.export(
     // We start with the typeface. Helvetica with slightly darkened headings.
 
     var p = element.style(
-      "body, input, button, p", {
+      "body, input, button, p, textarea", {
         "font-family": "Helvetica",
-        "font-size": "18px",
+        "font-size": "13pt",
         "color": "#555",
         "-webkit-font-smoothing": "antialiased",
+        "max-width": "400px",
       }
     )
 
@@ -41,6 +42,7 @@ module.exports = library.export(
         "background": "rgb(10, 209, 136)",
         "color": "white",
         "display": "inline-block",
+        "padding": "8px 10px 7px 10px",
         "margin-right": "15px",
         "margin-bottom": "15px",
       }
@@ -53,7 +55,6 @@ module.exports = library.export(
     var input = element.style(
       "input, input[type=text], button, .container, li, .multiple-choice, .row", {
         "border": "0px",
-        "padding": "11px 15px 7px 15px",
         "display": "block",
         "margin-bottom": "15px",
       }
@@ -68,18 +69,33 @@ module.exports = library.export(
     var placeholder = element.style(
       "input::-webkit-input-placeholder",
       {
-        "color": "#aaa",
+        "color": "#9aa",
       }
     )
 
     // and an underline.
 
     var textInput = element.style(
-      "input[type=text]",
+      "input[type=text], textarea",
       {
         "border-bottom": "2px solid #bbb",
-        "width": "20em",
+        "padding": "11px 15px 7px 15px",
+        "width": "85%",
         "color": "#3b8",
+        "display": "block",
+        "background": "#feffff",
+      }
+    )
+
+    var textarea = element.style(
+      "textarea",
+      {
+        "margin-bottom": "15px",
+        "border-top": "none",
+        "border-right": "none",
+        "border-left": "none",
+        "min-height": "8em",
+        "box-shadow": "inset 0px 2px 7px #bdc",
       }
     )
 
@@ -94,7 +110,7 @@ module.exports = library.export(
       }
     )
 
-    var stylesheet = element.stylesheet(p, h1, button, input, buttonHover, placeholder, textInput, container)
+    var stylesheet = element.stylesheet(p, h1, button, input, textarea, buttonHover, placeholder, textInput, container)
 
     return stylesheet
   }
