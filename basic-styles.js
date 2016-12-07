@@ -95,7 +95,7 @@ module.exports = library.export(
         "border-right": "none",
         "border-left": "none",
         "min-height": "8em",
-        "box-shadow": "inset 0px 2px 7px #bdc",
+        "box-shadow": "inset 0px 2px 7px #e8f3f3",
       }
     )
 
