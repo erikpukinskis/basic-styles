@@ -14,7 +14,7 @@ module.exports = library.export(
     // We start with the typeface. Helvetica with slightly darkened headings.
 
     var p = element.style(
-      "body, input, button, p, textarea", {
+      "body, input, button, .button, p, textarea", {
         "font-family": "Helvetica",
         "font-size": "13pt",
         "color": "#555",
@@ -37,7 +37,7 @@ module.exports = library.export(
     // A button is just a rectangle with a background color.
 
     var button = element.style(
-      "button, .multiple-choice, input[type=submit]", 
+      "button, .button, .multiple-choice, input[type=submit]", 
       {
         "background": "rgb(10, 209, 136)",
         "color": "white",
@@ -45,6 +45,8 @@ module.exports = library.export(
         "padding": "8px 10px 7px 10px",
         "margin-right": "15px",
         "margin-bottom": "15px",
+        "cursor": "pointer",
+        "text-decoration": "none",
       }
     )
 
@@ -53,7 +55,7 @@ module.exports = library.export(
     // Text inputs have a gray label
 
     var input = element.style(
-      "input, input[type=text], button, .container, li, .multiple-choice, .row", {
+      "input, input[type=text], .container, li, .multiple-choice, .row", {
         "border": "0px",
         "display": "block",
         "margin-bottom": "15px",
@@ -61,7 +63,7 @@ module.exports = library.export(
     )
  
     var buttonHover = element.style(
-      "button:hover, .multiple-choice:hover, input[type=submit]:hover", {
+      "button:hover, .button:hover, .multiple-choice:hover, input[type=submit]:hover", {
         "background-color": "rgb(0, 226, 143)",
       }
     )
