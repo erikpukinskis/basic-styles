@@ -40,6 +40,7 @@ module.exports = library.export(
       "button, .button, .multiple-choice, input[type=submit]", 
       {
         "background": "rgb(10, 209, 136)",
+        "border": "none",
         "color": "white",
         "display": "inline-block",
         "padding": "8px 10px 7px 10px",
@@ -47,6 +48,7 @@ module.exports = library.export(
         "margin-bottom": "15px",
         "cursor": "pointer",
         "text-decoration": "none",
+        "box-sizing": "border-box",
       }
     )
 
