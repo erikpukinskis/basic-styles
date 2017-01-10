@@ -19,7 +19,7 @@ module.exports = library.export(
         "font-size": "13pt",
         "color": "#555",
         "-webkit-font-smoothing": "antialiased",
-        "max-width": "400px",
+        "max-width": "600px",
       }
     )
 
@@ -102,9 +102,7 @@ module.exports = library.export(
       }
     )
 
-    // ## Separation
-
-    // In order to separate content out we have a .container class.
+    // Boxes
 
     var container = element.style(".container",
       {
@@ -113,7 +111,31 @@ module.exports = library.export(
       }
     )
 
-    var stylesheet = element.stylesheet(p, h1, button, input, textarea, buttonHover, placeholder, textInput, container)
+    var grid12 = element.style(
+      ".grid-12",
+      {
+        "display": "inline-block",
+        "width": "12em",
+      }
+    )
+
+    var grid8 = element.style(
+      ".grid-8",
+      {
+        "display": "inline-block",
+        "width": "8em",
+      }
+    )
+
+    var grid4 = element.style(
+      ".grid-4",
+      {
+        "display": "inline-block",
+        "width": "4em",
+      }
+    )
+
+    var stylesheet = element.stylesheet(p, h1, button, input, textarea, buttonHover, placeholder, textInput, container, grid12, grid8, grid4)
 
     return stylesheet
   }
