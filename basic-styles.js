@@ -137,6 +137,13 @@ module.exports = library.export(
 
     var stylesheet = element.stylesheet(p, h1, button, input, textarea, buttonHover, placeholder, textInput, container, grid12, grid8, grid4)
 
+    stylesheet.addTo = function(bridge) {
+      if (bridge.__hasNrtvBasicStyles) { return }
+
+      bridge.addToHead(stylesheet)
+      bridge.__hasNrtvBasicStyles = true
+    }
+
     return stylesheet
   }
 )
