@@ -13,15 +13,18 @@ module.exports = library.export(
 
     // We start with the typeface. Helvetica with slightly darkened headings.
 
-    var p = element.style(
+    var base = element.style(
       "body, input, button, .button, p, textarea", {
         "font-family": "Helvetica",
         "font-size": "13pt",
         "color": "#555",
         "-webkit-font-smoothing": "antialiased",
-        "max-width": "600px",
       }
     )
+
+    var p = element.style("p", {
+      "margin": "0.75em 0",
+    })
 
     var h1 = element.style(
       "h1", {
@@ -59,7 +62,6 @@ module.exports = library.export(
       "input, input[type=text], .container, li, .multiple-choice, .row", {
         "border": "0px",
         "display": "block",
-        "margin-bottom": "15px",
       }
     )
  
@@ -93,7 +95,6 @@ module.exports = library.export(
     var textarea = element.style(
       "textarea",
       {
-        "margin-bottom": "15px",
         "border-top": "none",
         "border-right": "none",
         "border-left": "none",
@@ -135,7 +136,7 @@ module.exports = library.export(
       }
     )
 
-    var stylesheet = element.stylesheet(p, h1, button, input, textarea, buttonHover, placeholder, textInput, container, grid12, grid8, grid4)
+    var stylesheet = element.stylesheet(base, p, h1, button, input, textarea, buttonHover, placeholder, textInput, container, grid12, grid8, grid4)
 
     stylesheet.addTo = function(bridge) {
       if (bridge.__hasNrtvBasicStyles) { return }
