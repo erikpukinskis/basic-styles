@@ -47,7 +47,6 @@ module.exports = library.export(
         "color": "white",
         "display": "inline-block",
         "padding": "8px 10px 7px 10px",
-        "margin-top": "0.25em",
         "cursor": "pointer",
         "text-decoration": "none",
         "box-sizing": "border-box",
@@ -84,7 +83,14 @@ module.exports = library.export(
       "input[type=text], textarea",
       {
         "border-bottom": "2px solid #bbb",
-        "padding": "11px 15px 7px 15px",
+
+        // Looks about right when we have <p>Text></p><p><input></p>
+        "padding-top": "9px",
+        "margin-top": "-8px",
+
+        "padding-right": "15px",
+        "padding-left": "15px",
+        "padding-bottom": "7px", 
         "width": "85%",
         "color": "#3b8",
         "display": "block",
