@@ -31,7 +31,6 @@ module.exports = library.export(
         "-webkit-font-smoothing": "auto",
         "font-weight": "normal",
         "font-size": "1em",
-        "padding-top": "25px",
       }
     )
 
@@ -80,7 +79,7 @@ module.exports = library.export(
     // and an underline.
 
     var textInput = element.style(
-      "input[type=text], textarea",
+      "input[type=text], textarea, .text-input",
       {
         "border-bottom": "2px solid #bbb",
 
