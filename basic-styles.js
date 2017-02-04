@@ -41,7 +41,7 @@ module.exports = library.export(
     var button = element.style(
       "button, .button, .multiple-choice, input[type=submit]", 
       {
-        "background": "rgb(10, 209, 136)",
+        "background-color": "#0ad188",
         "border": "none",
         "color": "white",
         "display": "inline-block",
