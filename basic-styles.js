@@ -60,6 +60,7 @@ module.exports = library.export(
       "input, input[type=text], .container, li, .multiple-choice, .row", {
         "border": "0px",
         "display": "block",
+        "max-width": "20em",
       }
     )
  
