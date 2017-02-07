@@ -23,7 +23,8 @@ module.exports = library.export(
     )
 
     var p = element.style("p", {
-      "margin": "0.75em 0",
+      "margin-top": "20px",
+      "margin-bottom": "10px",
     })
 
     var h1 = element.style(
@@ -88,7 +89,7 @@ module.exports = library.export(
 
         // Looks about right when we have <p>Text></p><p><input></p>
         "padding-top": "9px",
-        "margin-top": "-8px",
+        "margin-top": "10px",
 
         "padding-right": "15px",
         "padding-left": "15px",
