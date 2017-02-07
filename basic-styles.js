@@ -31,6 +31,8 @@ module.exports = library.export(
         "-webkit-font-smoothing": "auto",
         "font-weight": "normal",
         "font-size": "1em",
+        "margin-top": "1.5em",
+        "margin-bottom": "1em",
       }
     )
 
