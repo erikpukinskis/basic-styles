@@ -57,7 +57,7 @@ module.exports = library.export(
     // Text inputs have a gray label
 
     var input = element.style(
-      "input, input[type=text], .container, li, .multiple-choice, .row", {
+      "input, input[type=text], .container, li, .multiple-choice", {
         "border": "0px",
         "display": "block",
         "max-width": "20em",
