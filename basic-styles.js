@@ -31,10 +31,10 @@ module.exports = library.export(
       "h1", {
         "-webkit-font-smoothing": "auto",
         "font-weight": "normal",
-        "font-size": "1em",
+        "font-size": "1.1em",
         "margin-top": "1.5em",
         "margin-bottom": "1em",
-        "color": "#111",
+        "color": "#222",
       }
     )
 
