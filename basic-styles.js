@@ -42,10 +42,12 @@ module.exports = library.export(
 
     // A button is just a rectangle with a background color.
 
+    var BASIC_GREEN = "#0ad188"
+    
     var button = element.style(
       "button, .button, .multiple-choice, input[type=submit]", 
       {
-        "background-color": "#0ad188",
+        "background-color": BASIC_GREEN,
         "border": "none",
         "color": "white",
         "display": "inline-block",
@@ -154,6 +156,8 @@ module.exports = library.export(
       bridge.addToHead(stylesheet)
       bridge.__hasNrtvBasicStyles = true
     }
+
+    stylesheet.green = BASIC_GREEN
 
     return stylesheet
   }
