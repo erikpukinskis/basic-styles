@@ -151,6 +151,10 @@ module.exports = library.export(
     var stylesheet = element.stylesheet(base, p, h1, button, input, textarea, buttonHover, placeholder, textInput, container, grid12, grid8, grid4)
 
     stylesheet.addTo = function(bridge) {
+      if (!bridge.__isNrtvBrowserBridge) {
+        throw new Error("Trying to add styles to "+bridge+" but it's not a browser bridge.")
+      }
+      
       if (bridge.__hasNrtvBasicStyles) { return }
 
       bridge.addToHead(stylesheet)
