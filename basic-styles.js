@@ -98,7 +98,6 @@ module.exports = library.export(
         "padding-left": "15px",
         "padding-bottom": "7px", 
         "width": "85%",
-        "color": "#3b8",
         "display": "block",
         "background": "#feffff",
       }
@@ -110,7 +109,6 @@ module.exports = library.export(
         "border-top": "none",
         "border-right": "none",
         "border-left": "none",
-        "min-height": "8em",
         "box-shadow": "inset 0px 2px 7px #e8f3f3",
       }
     )
