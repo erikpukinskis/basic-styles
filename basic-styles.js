@@ -23,8 +23,8 @@ module.exports = library.export(
     )
 
     var p = element.style("p", {
-      "margin-top": "20px",
-      "margin-bottom": "10px",
+      "margin-top": "0.5em",
+      "margin-bottom": "0.5em",
     })
 
     var h1 = element.style(
