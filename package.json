@@ -11,7 +11,8 @@
     "add-html": "*"
   },
   "devDependencies": {
-    "run-test": "*"
+    "run-test": "*",
+    "web-host": "*"
   },
   "scripts": {
     "test": "node test.js"
