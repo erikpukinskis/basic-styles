@@ -18,7 +18,6 @@ library.using(
       ]
 
     host.onRequest(function(getBridge) {
-      debugger
       var bridge = getBridge()
       basicStyles.addTo(bridge)
       bridge.send(sample)
