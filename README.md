@@ -1,6 +1,6 @@
 **basic-styles** lets you lay out text and forms for interacting with a person.
 
-## Demo
+### Demo
 
 ```javascript
 var library = require("module-library")(require)
@@ -26,5 +26,7 @@ library.using(
   }
 )
 ```
+
+### Output
 
 ![screenshot of a h1, input, p, button, and textarea using the styles](/demo.gif)
