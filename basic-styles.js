@@ -157,7 +157,7 @@ module.exports = library.export(
       }
     )
 
-    var stylesheet = element.stylesheet(base, p, h1, button, input, textarea, buttonHover, placeholder, textInput, container, grid12, grid8, grid4)
+    var stylesheet = element.stylesheet(base, p, h1, button, input, textarea, buttonHover, placeholder, textInput, container, grid12, grid8, grid4, lilPage)
 
     stylesheet.addTo = function(bridge) {
       if (!bridge.__isNrtvBrowserBridge) {
