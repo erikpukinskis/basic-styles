@@ -44,7 +44,7 @@ module.exports = library.export(
         "font-weight": "normal",
         "font-size": "1.1em",
         "margin-top": "1.5em",
-        "margin-bottom": "1em",
+        "margin-bottom": "0.5em",
         "color": "#222",
       }
     )
