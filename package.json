@@ -1,6 +1,6 @@
 {
   "name": "basic-styles",
-  "version": "0.30.0",
+  "version": "0.31.0",
   "description": "stylesheet for conversational mobile UI",
   "main": "basic-styles.js",
   "dependencies": {
