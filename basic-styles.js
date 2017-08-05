@@ -128,7 +128,7 @@ module.exports = library.export(
 
     var container = element.style(".container",
       {
-        "padding-bottom": "0px",
+        "padding": "15px 10px 0px 10px",
         "box-shadow": "0px 2px 7px rgba(0,0,0,0.2)",
       }
     )
