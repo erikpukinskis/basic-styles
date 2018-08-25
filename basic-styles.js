@@ -62,7 +62,7 @@ module.exports = library.export(
         "border": "none",
         "color": "white",
         "display": "inline-block",
-        "padding": "8px 10px 7px 10px",
+        "padding": "8px 10px",
         "cursor": "pointer",
         "text-decoration": "none",
         "box-sizing": "border-box",
