@@ -88,7 +88,7 @@ module.exports = library.export(
     )
 
     var placeholder = element.style(
-      "input::-webkit-input-placeholder",
+      "input::placeholder, textarea::placeholder",
       {
         "color": "#9aa",
       }
