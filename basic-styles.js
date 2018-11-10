@@ -60,9 +60,10 @@ module.exports = library.export(
     var button = element.style(
       "button, .button, .multiple-choice, input[type=submit]", 
       {
-        "background-color": BASIC_GREEN,
-        "background-image": "none",
-        "border-radius": "0",
+        "background": BASIC_GREEN,
+        "-webkit-appearance": "none",
+        "-webkit-border-radius": "0",
+        "border-radius": "0px",
         "border": "none",
         "color": "white",
         "display": "inline-block",
