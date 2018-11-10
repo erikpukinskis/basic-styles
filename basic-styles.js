@@ -61,6 +61,8 @@ module.exports = library.export(
       "button, .button, .multiple-choice, input[type=submit]", 
       {
         "background-color": BASIC_GREEN,
+        "background-image": "none",
+        "border-radius": "0",
         "border": "none",
         "color": "white",
         "display": "inline-block",
