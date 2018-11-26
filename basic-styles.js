@@ -41,7 +41,7 @@ module.exports = library.export(
     })
 
     var h1 = element.style(
-      "h1", {
+      "h1, h2", {
         "-webkit-font-smoothing": "auto",
         "font-weight": "normal",
         "font-size": "1.1em",
@@ -50,6 +50,12 @@ module.exports = library.export(
         "color": "#222",
       }
     )
+
+    var h2 = element.style(
+      "h2",{
+      "font-weight": "lighter",
+      "color": "#804",
+      "font-size": "1.4em"})
 
     // ## Buttons
 
@@ -162,7 +168,7 @@ module.exports = library.export(
       }
     )
 
-    var stylesheet = element.stylesheet(base, p, h1, button, input, textarea, buttonHover, placeholder, textInput, container, grid12, grid8, grid4, lilPage)
+    var stylesheet = element.stylesheet(base, p, h1, h2, button, input, textarea, buttonHover, placeholder, textInput, container, grid12, grid8, grid4, lilPage)
 
     stylesheet.addTo = function(bridge) {
       if (!bridge.__isNrtvBrowserBridge) {
