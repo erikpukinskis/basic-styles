@@ -32,7 +32,7 @@ module.exports = library.export(
         "margin-bottom": "30px",
         "padding-left": "10px",
         "box-sizing": "border-box",
-        "background": "#fdfdfc",
+        "background": "#ecf0f1",
     })
 
     var p = element.style("p", {
