@@ -1,8 +1,8 @@
 var library = require("module-library")(require)
 
 library.using(
-  ["./", "web-element", "web-host"],
-  function(basicStyles, element, host) {
+  ["./", "web-element", "express"],
+  function(basicStyles, element, express) {
 
     var sample = [
         element("h1", "Some things you can do with basic-styles"),
@@ -12,12 +12,13 @@ library.using(
         element("p", element("button", "Click me")),
       ]
 
-    host.onRequest(function(getBridge) {
-      debugger
-      var bridge = getBridge()
-      basicStyles.addTo(bridge)
-      bridge.send(sample)
-    })
+    var page = element(
+      element("head", basicStyles.html()),
+      element("body", sample)).html()
 
+    var app = express()
+
+    app.get("/", function(request, response) {
+      response.send(page)})
   }
 )

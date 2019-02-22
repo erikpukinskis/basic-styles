@@ -26,8 +26,8 @@ module.exports = library.export(
       ".lil-page",
       {
         "display": "block",
-        "max-width": "320px",
-        "min-height": "360px",
+        "max-width": "21em",
+        "min-height": "26em",
         "padding-top": "30px",
         "margin-bottom": "30px",
         "padding-left": "10px",

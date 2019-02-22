@@ -5,14 +5,11 @@
   "main": "basic-styles.js",
   "dependencies": {
     "module-library": "*",
-    "web-element": "*",
-    "web-site": "*",
-    "browser-bridge": "*",
-    "add-html": "*"
+    "web-element": "*"
   },
   "devDependencies": {
     "run-test": "*",
-    "web-host": "*"
+    "express": "*"
   },
   "scripts": {
     "test": "node test.js"
