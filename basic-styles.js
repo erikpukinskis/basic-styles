@@ -25,8 +25,8 @@ module.exports = library.export(
     var lilPage = element.style(
       ".lil-page",{
       "display": "block",
-      "max-width": "21em",
-      "min-height": "10em",
+      "max-width": "400px",
+      "min-height": "200px",
       "margin-bottom": "30px",
       "padding": "30px 10px 10px 10px",
       "box-sizing": "border-box",
