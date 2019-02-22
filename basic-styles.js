@@ -27,9 +27,10 @@ module.exports = library.export(
       {
         "display": "block",
         "max-width": "21em",
-        "min-height": "26em",
+        "min-height": "10em",
         "padding-top": "30px",
         "margin-bottom": "30px",
+        "padding-bottom": "10px",
         "padding-left": "10px",
         "box-sizing": "border-box",
         "background": "#ecf0f1",
