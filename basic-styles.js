@@ -23,17 +23,18 @@ module.exports = library.export(
     )
 
     var lilPage = element.style(
-      ".lil-page",
-      {
-        "display": "block",
-        "max-width": "21em",
-        "min-height": "10em",
-        "padding-top": "30px",
-        "margin-bottom": "30px",
-        "padding-bottom": "10px",
-        "padding-left": "10px",
-        "box-sizing": "border-box",
-        "background": "#ecf0f1",
+      ".lil-page",{
+      "display": "block",
+      "max-width": "21em",
+      "min-height": "10em",
+      "margin-bottom": "30px",
+      "padding": "30px 10px 10px 10px",
+      "box-sizing": "border-box",
+      "background": "#f5f6f7", // darker: "#ecf0f1",
+
+      " h1:first-child": {
+        "margin-top": "0"
+      },
     })
 
     var p = element.style("p", {
