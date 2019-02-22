@@ -27,8 +27,8 @@ module.exports = library.export(
       "display": "block",
       "max-width": "400px",
       "min-height": "5em",
-      "margin": "30px 0",
-      "padding": "30px 10px 10px 10px",
+      "margin": "2em 0",
+      "padding": "30px 10px",
       "box-sizing": "border-box",
       "background": "#f5f6f7", // darker: "#ecf0f1",
 
