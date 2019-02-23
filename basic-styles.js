@@ -110,7 +110,7 @@ module.exports = library.export(
     // and an underline.
 
     var textInput = element.style(
-      "input[type=text]:not([size]), textarea, .text-input",
+      "input[type=text], textarea, .text-input",
       {
         "border-bottom": "2px solid #bbb",
 
@@ -121,11 +121,15 @@ module.exports = library.export(
         "padding-right": "15px",
         "padding-left": "15px",
         "padding-bottom": "7px", 
-        "width": "85%",
         "display": "block",
         "background": "#feffff",
       }
     )
+
+    var inputWidth = element.style(
+      "input[type=text]:not([size]), textarea, .text-input", {
+        "width": "85%",
+      })
 
     var textarea = element.style(
       "textarea",
@@ -170,7 +174,7 @@ module.exports = library.export(
       }
     )
 
-    var stylesheet = element.stylesheet(base, p, h1, h2, button, input, textarea, buttonHover, placeholder, textInput, container, grid12, grid8, grid4, lilPage)
+    var stylesheet = element.stylesheet(base, p, h1, h2, button, input, textarea, inputWidth, buttonHover, placeholder, textInput, container, grid12, grid8, grid4, lilPage)
 
     stylesheet.addTo = function(bridge) {
       if (!bridge.__isNrtvBrowserBridge) {
