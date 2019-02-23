@@ -110,7 +110,7 @@ module.exports = library.export(
     // and an underline.
 
     var textInput = element.style(
-      "input[type=text], textarea, .text-input",
+      "input[type=text]:not([size]), textarea, .text-input",
       {
         "border-bottom": "2px solid #bbb",
 
