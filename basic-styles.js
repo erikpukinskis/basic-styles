@@ -14,7 +14,7 @@ module.exports = library.export(
     // We start with the typeface. Helvetica with slightly darkened headings.
 
     var base = element.style(
-      "body, input, button, .button, p, textarea", {
+      "body, input, button, .button, p, textarea, select", {
         "font-family": "Helvetica",
         "font-size": "13pt",
         "color": "#555",
@@ -66,7 +66,7 @@ module.exports = library.export(
     var BASIC_GREEN = "#0ad188"
     
     var button = element.style(
-      "button, .button, .multiple-choice, input[type=submit]", 
+      "button, .button, .multiple-choice, input[type=submit], select",
       {
         "background": BASIC_GREEN,
         "-webkit-appearance": "none",
