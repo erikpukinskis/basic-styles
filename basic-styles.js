@@ -16,7 +16,7 @@ module.exports = library.export(
     var base = element.style(
       "body, input, button, .button, p, textarea, select", {
         "font-family": "Helvetica",
-        "font-size": "1em",
+        "font-size": "14pt",
         "color": "#555",
         "-webkit-font-smoothing": "antialiased",
       }
@@ -25,11 +25,13 @@ module.exports = library.export(
     var lilPage = element.style(
       ".lil-page",{
       "display": "block",
-      "max-width": "400px",
+      "max-width": "420px",
       "min-height": "5em",
-      "margin": "2em 0",
-      "padding": "30px 10px",
+      "margin": "2em 1em",
+      "padding": "1.5em 1em",
       "box-sizing": "border-box",
+      "border-radius": "3px",
+      "border": "1px solid #ebe9ff",
       "background": "#f5f6f7", // darker: "#ecf0f1",
 
       " h1:first-child": {
@@ -38,17 +40,17 @@ module.exports = library.export(
     })
 
     var p = element.style("p", {
-      "margin-top": "0.5em",
-      "margin-bottom": "0.5em",
+      "margin-top": "1em", // 1em / 1.3em
+      "margin-bottom": "0",
     })
 
     var h1 = element.style(
       "h1, h2", {
         "-webkit-font-smoothing": "auto",
         "font-weight": "normal",
-        "font-size": "1.1em",
-        "margin-top": "1.5em",
-        "margin-bottom": "0.5em",
+        "font-size": "1.3em",
+        "margin-top": "1em",
+        "margin-bottom": "0",
         "color": "#222",
       }
     )
@@ -71,8 +73,9 @@ module.exports = library.export(
         "background": BASIC_GREEN,
         "-webkit-appearance": "none",
         "-webkit-border-radius": "0",
-        "border-radius": "0px",
-        "border": "none",
+        "border-radius": "3px",
+        "box-sizing": "border-box",
+        "border": "1px solid #1d8",
         "color": "white",
         "display": "inline-block",
         "padding": "8px 10px",
