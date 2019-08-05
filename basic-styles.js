@@ -22,6 +22,22 @@ module.exports = library.export(
       }
     )
 
+    var body = element.style(
+      "body.dark",{
+      "background": "#443554",
+
+      " button, .button, input[type=submit]": {
+        "border-color": "#ddffe6",        
+        "color": "#47b9a1",
+        "background": "white",
+      },
+
+      " .lil-page": {
+        "background": "#e6e6e6",
+        "border-color": "#ccfbdd",
+      },
+    })
+
     var lilPage = element.style(
       ".lil-page",{
       "display": "block",
@@ -51,7 +67,7 @@ module.exports = library.export(
         "font-size": "1.3em",
         "margin-top": "1em",
         "margin-bottom": "0",
-        "color": "#555",
+        "color": "#222",
       }
     )
 
@@ -177,7 +193,8 @@ module.exports = library.export(
       }
     )
 
-    var stylesheet = element.stylesheet(base, p, h1, h2, button, input, textarea, inputWidth, buttonHover, placeholder, textInput, container, grid12, grid8, grid4, lilPage)
+
+    var stylesheet = element.stylesheet(base, p, h1, h2, button, input, textarea, inputWidth, buttonHover, placeholder, textInput, container, grid12, grid8, grid4, lilPage, body)
 
     stylesheet.addTo = function(bridge) {
       if (!bridge.__isNrtvBrowserBridge) {
