@@ -15,10 +15,9 @@ module.exports = library.export(
 
     var base = element.style(
       "body, input, button, .button, p, textarea, select", {
-        "font-family": "Helvetica",
-        "font-size": "14pt",
+        "font-family": "Helvetica, sans-serif",
+        "font-size": "18pt",
         "color": "#555",
-        "-webkit-font-smoothing": "antialiased",
       }
     )
 
