@@ -127,10 +127,12 @@ module.exports = library.export(
 
     // and an underline.
 
+    var LIGHT = "#bbb"
+
     var textInput = element.style(
       "input[type=text], textarea, .text-input",
       {
-        "border-bottom": "2px solid #bbb",
+        "border-bottom": "2px solid "+LIGHT,
 
         // Looks about right when we have <p>Text></p><p><input></p>
         "padding-top": "9px",
@@ -207,6 +209,7 @@ module.exports = library.export(
     }
 
     stylesheet.green = BASIC_GREEN
+    stylesheet.light = LIGHT
 
     return stylesheet
   }
