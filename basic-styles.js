@@ -9,6 +9,19 @@ module.exports = library.export(
 
     // This a minimal set of UI (user interface) controls for typing and pushing buttons and stuff.
 
+    // ## Colors
+
+    var colors = {
+      light: "#bbb",
+      bright: "#0ad188",
+      hey: "#ffea66",
+    }
+
+    colors.active = {
+      light: colors.bright,
+      bright: "#07ed99",
+    }
+
     // ## Type
 
     // We start with the typeface. Helvetica with slightly darkened headings.
@@ -79,18 +92,22 @@ module.exports = library.export(
     // ## Buttons
 
     // A button is just a rectangle with a background color.
-
-    var BASIC_GREEN = "#0ad188"
     
     var button = element.style(
       "button, .button, .multiple-choice, input[type=submit], select",
       {
-        "background": BASIC_GREEN,
+        "background": colors.bright,
+        ":hover": {
+          "background": colors.active.bright},
+        ".light": {
+          "background": colors.light},
+        ".light:hover": {
+          "background": colors.active.light},
         "-webkit-appearance": "none",
         "-webkit-border-radius": "0",
         "border-radius": "3px",
         "box-sizing": "border-box",
-        "border": "1px solid #1d8",
+        "border": "none",
         "color": "white",
         "display": "inline-block",
         "padding": "8px 10px",
@@ -127,12 +144,10 @@ module.exports = library.export(
 
     // and an underline.
 
-    var LIGHT = "#bbb"
-
     var textInput = element.style(
       "input[type=text], textarea, .text-input",
       {
-        "border-bottom": "2px solid "+LIGHT,
+        "border-bottom": "2px solid "+colors.light,
 
         // Looks about right when we have <p>Text></p><p><input></p>
         "padding-top": "9px",
@@ -149,6 +164,11 @@ module.exports = library.export(
     var inputWidth = element.style(
       "input[type=text]:not([size]), textarea, .text-input", {
         "width": "85%",
+      })
+
+    var inputWidth = element.style(
+      "input[type=text][size]", {
+        "text-overflow": "ellipsis",
       })
 
     var textarea = element.style(
@@ -194,8 +214,18 @@ module.exports = library.export(
       }
     )
 
+    var hotFlash = element.style(
+      ".hot-flash",{
+        "animation": "red-flash 1.5s 1"})
 
-    var stylesheet = element.stylesheet(base, p, h1, h2, button, input, textarea, inputWidth, buttonHover, placeholder, textInput, container, grid12, grid8, grid4, lilPage, body)
+    var flash = element.style(
+      "@keyframes red-flash",{
+        "from": {
+          "filter": "sepia(100%) hue-rotate(320deg) saturate(7)"},
+        "to": {
+          "filter": "none"}})
+
+    var stylesheet = element.stylesheet(base, p, h1, h2, button, input, textarea, inputWidth, buttonHover, placeholder, textInput, container, grid12, grid8, grid4, lilPage, body, flash, hotFlash)
 
     stylesheet.addTo = function(bridge) {
       if (!bridge.__isNrtvBrowserBridge) {
@@ -208,8 +238,7 @@ module.exports = library.export(
       bridge.__hasNrtvBasicStyles = true
     }
 
-    stylesheet.green = BASIC_GREEN
-    stylesheet.light = LIGHT
+    stylesheet.colors = colors
 
     return stylesheet
   }
