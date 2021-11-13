@@ -27,7 +27,7 @@ module.exports = library.export(
     // We start with the typeface. Helvetica with slightly darkened headings.
 
     var base = element.style(
-      "body, input, button, .button, p, textarea, select", {
+      "body, input, button, .button, p, textarea, .textarea, select", {
         "font-family": "Helvetica, sans-serif",
         "font-size": "18pt",
         "color": "#555",
@@ -39,7 +39,7 @@ module.exports = library.export(
       "background": "#443554",
 
       " button, .button, input[type=submit]": {
-        "border-color": "#ddffe6",        
+        "border-color": "#ddffe6",
         "color": "#47b9a1",
         "background": "white",
       },
@@ -92,7 +92,7 @@ module.exports = library.export(
     // ## Buttons
 
     // A button is just a rectangle with a background color.
-    
+
     var button = element.style(
       "button, .button, .multiple-choice, input[type=submit], select",
       {
@@ -128,7 +128,7 @@ module.exports = library.export(
         "max-width": "20em",
       }
     )
- 
+
     var buttonHover = element.style(
       "button:hover, .button:hover, .multiple-choice:hover, input[type=submit]:hover", {
         "background-color": "rgb(0, 226, 143)",
@@ -145,7 +145,7 @@ module.exports = library.export(
     // and an underline.
 
     var textInput = element.style(
-      "input[type=text], textarea, .text-input",
+      "input[type=text], textarea, .textarea, .text-input",
       {
         "border-bottom": "2px solid "+colors.light,
 
@@ -155,14 +155,14 @@ module.exports = library.export(
 
         "padding-right": "15px",
         "padding-left": "15px",
-        "padding-bottom": "7px", 
+        "padding-bottom": "7px",
         "display": "block",
         "background": "#feffff",
       }
     )
 
     var inputWidth = element.style(
-      "input[type=text]:not([size]), textarea, .text-input", {
+      "input[type=text]:not([size]), textarea, .textarea .text-input", {
         "width": "85%",
       })
 
@@ -172,7 +172,7 @@ module.exports = library.export(
       })
 
     var textarea = element.style(
-      "textarea",
+      "textarea, .textarea",
       {
         "border-top": "none",
         "border-right": "none",
@@ -231,7 +231,7 @@ module.exports = library.export(
       if (!bridge.__isNrtvBrowserBridge) {
         throw new Error("Trying to add styles to "+bridge+" but it's not a browser bridge.")
       }
-      
+
       if (bridge.__hasNrtvBasicStyles) { return }
 
       bridge.addToHead(stylesheet)
